@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "501936787613",
+    "firebase_url": "https://flutter-demo-c8d3c.firebaseio.com",
+    "project_id": "flutter-demo-c8d3c",
+    "storage_bucket": "flutter-demo-c8d3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501936787613:android:7706c797fbb08568860474",
+        "android_client_info": {
+          "package_name": "com.example.bookshelf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501936787613-ec4fifdkvg7gvf9tugj9576vkdoh8lhu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVscYnBLceTCXaBi3yh9609awQ-1xj23g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501936787613-ec4fifdkvg7gvf9tugj9576vkdoh8lhu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
