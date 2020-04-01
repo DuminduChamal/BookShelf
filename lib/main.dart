@@ -20,7 +20,7 @@ class BookApp extends StatelessWidget {
 class BookFireBaseDemo extends StatefulWidget {
 
   BookFireBaseDemo(): super();
-  final String appTitle = "Book DB";
+  final String appTitle = "Book Shelf";
 
   @override
   _BookFireBaseDemoState createState() => _BookFireBaseDemoState();
@@ -153,7 +153,7 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
               },
           ),
           onTap: (){
-            
+            setUpdateUI(book);
           },
           ),
         ),
@@ -208,8 +208,7 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
             icon: Icon(Icons.add), 
             onPressed: (){
               setState(() {
-                textFieldVisibility=!textFieldVisibility;
-                
+                textFieldVisibility=!textFieldVisibility; 
               });
             }
           )
