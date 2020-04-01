@@ -60,6 +60,42 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
     }
   }
 
+  updateBook(Book book, String bookName, String authorName)
+  {
+    try 
+    {
+      Firestore.instance.runTransaction((transaction)async
+      {
+        await transaction.update(book.documentReference, {'bookName':bookName, 'authorName':authorName});
+      });
+    } 
+    catch (e) 
+    {
+      print(e.toString());
+    }
+  }
+
+  updateIfEditing()
+  {
+    if(isEditing)
+    {
+      //update
+      updateBook(currentBook, bookNameContoller.text, bookAuthorContoller.text);
+      setState(() {
+        isEditing=false;
+      });
+    }
+  }
+
+  deleteBook(Book book)
+  {
+    Firestore.instance.runTransaction(
+      (Transaction transaction) async {
+        await transaction.delete(book.documentReference);
+      }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
