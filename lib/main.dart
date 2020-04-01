@@ -34,7 +34,7 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
   bool isEditing = false;
   bool textFieldVisibility = false;
 
-  String firestoreCollectionName = "Book";
+  String firestoreCollectionName = "Books";
 
   Book currentBook;
 
