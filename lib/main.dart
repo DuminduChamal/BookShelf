@@ -98,21 +98,21 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
 
   Widget buildBody(BuildContext context)
   {
-    return StreamBuilder<QuerySnapshot>{
+    return StreamBuilder<QuerySnapshot>(
       stream: getAllBooks(),
-      builder: (context,snapshot){
+      builder: (context, snapshot){
         if(snapshot.hasError){
           return Text('Error ${snapshot.error}');
         }
-        if(snapshot.hashData){
+        if(snapshot.hasData){
           print("Document -> ${snapshot.data.documents.length}");
           return buildList(context, snapshot.data.documents);
         }
       },
-    };
+    );
   }
 
-  Widget buildList(BuildContext context List<DocumentSnapshot> snapshot){
+  Widget buildList(BuildContext context, List<DocumentSnapshot> snapshot){
     return ListView(
       children: snapshot.map((data) => listItemBuild(context,data)).toList(),
     );
