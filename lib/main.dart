@@ -79,7 +79,7 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
   {
     if(isEditing)
     {
-      //update
+      //update function
       updateBook(currentBook, bookNameContoller.text, bookAuthorContoller.text);
       setState(() {
         isEditing=false;
