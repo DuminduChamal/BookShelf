@@ -31,7 +31,7 @@ class _BookFireBaseDemoState extends State<BookFireBaseDemo> {
   TextEditingController bookNameContoller = TextEditingController();
   TextEditingController bookAuthorContoller = TextEditingController();
 
-  bool isEditing = false;
+  bool isEditing = true;
   bool textFieldVisibility = false;
 
   String firestoreCollectionName = "Books";
